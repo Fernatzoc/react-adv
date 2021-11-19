@@ -40,7 +40,7 @@ export const Navigation = () => {
           <Routes>
 
             {
-              routes.map( ({ path, Component }) => (
+              routes.map( ({ path, component:Component }) => (
                 <Route
                   key={ path  }
                   path={ path }
