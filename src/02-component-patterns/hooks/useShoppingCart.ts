@@ -15,23 +15,9 @@ export const useShoppingCart = () => {
     product: Product;
   }) => {
     // console.log(count, product);
-    setShopingCart((oldShoppingCart) => {
+    setShopingCart((oldShoppingCart) => {    
 
-      const productInCart: ProductInCart = oldShoppingCart[product.id] || { ...product, count: 0 };
-
-      if( Math.max( productInCart.count + count, 0 ) > 0 ) {
-        productInCart.count += count;
-        return {
-          ...oldShoppingCart,
-          [product.id]: productInCart
-        }
-      }
-
-      //Delete product
-      const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-      return {...rest};      
-
-/*       if (count === 0) {
+      if (count === 0) {
         const { [product.id]: toDelete, ...rest } = oldShoppingCart;
         return rest;
       }
@@ -39,7 +25,7 @@ export const useShoppingCart = () => {
       return {
         ...oldShoppingCart,
         [product.id]: { ...product, count },
-      }; */
+      }; 
     });
   };
 
