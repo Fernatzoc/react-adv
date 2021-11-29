@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink
+  NavLink,
 } from "react-router-dom";
 
 import logo from '../logo.svg'
